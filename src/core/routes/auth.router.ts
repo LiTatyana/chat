@@ -9,8 +9,6 @@ import { createUser } from '../validators/user.validator';
 
 const authRouter = Router();
 
-authRouter.use(asyncHandler(authGuard));
-
 authRouter.post('/registration', async (req, res, next) => {
 	const data = createUser.parse(req.body);
 
